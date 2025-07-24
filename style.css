@@ -1,0 +1,151 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(45deg, #6a11cb, #2575fc); /* Gradient background */
+    color: #fff;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 100%;
+}
+
+/* Header */
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.1em;
+    color: #ddd;
+}
+
+/* Profile Card */
+.profile-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+}
+
+.profile-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.profile-image img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-image img:hover {
+    transform: scale(1.1);
+}
+
+.profile-info {
+    flex: 2;
+    text-align: left;
+}
+
+.profile-info h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color:#00fff2;
+}
+
+.profile-info p {
+    font-size: 1.1em;
+    color: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.social-links a.instagram:hover {
+    color: #E4405F; /* Warna khas Instagram */
+}
+
+.instagram.clicked {
+    transform: scale(1.2);
+    transition: transform 0.2s ease;
+}
+
+/* Media Query untuk perangkat dengan lebar layar lebih kecil dari 768px (HP atau tablet) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .profile-image {
+        margin-bottom: 15px;
+    }
+
+    .profile-info h2 {
+        font-size: 1.6em;
+    }
+
+    .profile-info p {
+        font-size: 1em;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+
+    .social-links a {
+        font-size: 1.3em;
+    }
+}
+
